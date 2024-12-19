@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <main>
+      <!-- nav -->
+      <header class="bg-main p-5 overflow-hidden position-relative">
+        <div class="nav-bar overflow-hidden">
+          <div class="d-flex justify-content-around">
+            <div class="con-logo">
+              <a class="d-flex w-100" href="#">
+                <img class="img-fluid" src="imges/logo@2x.png" alt="logo" />
+                <div class="text-logo ms-3">
+                  <h1 class="h6 bold m-0">Weather</h1>
+                  <p>tagline goes here</p>
+                </div>
+              </a>
+            </div>
+            <ul id="list" class="m-0 d-lg-flex d-none">
+              <li class="d-flex justify-content-center align-items-center">
+                <a
+                  class="text-decoration-none current-item item fs-6 w-100"
+                  href=""
+                >
+                  Home
+                </a>
+              </li>
+              <li class="d-flex justify-content-center align-items-center">
+                <a class="text-decoration-none item fs-6 w-100" href="">
+                  News
+                </a>
+              </li>
+              <li class="d-flex justify-content-center align-items-center">
+                <a class="text-decoration-none item fs-6 w-100" href="">
+                  Live Cameras
+                </a>
+              </li>
+              <li class="d-flex justify-content-center align-items-center">
+                <a class="text-decoration-none item fs-6 w-100" href="">
+                  Photos
+                </a>
+              </li>
+              <li class="d-flex justify-content-center align-items-center">
+                <a class="text-decoration-none item fs-6 w-100" href="">
+                  Contant
+                </a>
+              </li>
+            </ul>
+            <div id="bar" class="d-lg-none">
+              <i class="fa-solid fa-bars text-white fs-2"></i>
+            </div>
+          </div>
+          <div id="mobile-navbar" class="hidden mt-5 w-90 mx-auto">
+            <ul id="list-mobile"
+            class="text-white text-center list-unstyled rounded-2"
+            style="background-color: #323544"
+            >
+              <li class="p-3 color-secondary1 border-bottom m-0">Home</li>
+              <li class="p-3 border-bottom m-0">News</li>
+              <li class="p-3 border-bottom m-0">Live Cameras</li>
+              <li class="p-3 border-bottom m-0">Photos</li>
+              <li class="p-3 m-0">Contant</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- out put weather -->
+      <section>
+        <div class="weather min-vh-100 overflow-hidden">
+          <div class="container-md container-fluid mt-5 pt-3 w-75">
+            <div
+              class="search bg-main rounded-5 d-flex justify-content-between p-1"
+            >
+              <input id="search"
+                class="w-90 bg-main ms-3 text-white border-0 p-3"
+                type="search"
+                placeholder="Find your location"
+              />
+              <button id="btnSearch"
+                class="py-3 px-5 border-0 rounded-5 bg-secondary1 text-white"
+              >
+                Find
+              </button>
+            </div>
+            <div class="output mt-5 pb-5">
+              <div class="row g-md-0 g-sm-2">
+                <!-- <div class="col-lg-4"> 
+                  <div class="item1">
+                    <div
+                      class="title d-flex justify-content-between rounded-left-top"
+                    >
+                      <small>Tuesday10</small>
+                      <small>December</small>
+                    </div>
+                    <div class="info bg-main rounded-left-buttom">
+                      <p class="text-gray ps-3 pt-4 fs-17">Cairo</p>
+                      <p class="fs-90 fw-bold m-0 ps-3 mb-4 text-white">
+                        21.2oC
+                      </p>
+                      <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather">
+                      <p class="color-secondary1 mt-2 ps-4">Partly cloudy</p>
+                      <div>
+                        <i
+                          class="fa-solid fs-2 text-gray ps-4 pb-5 fa-cloud-moon-rain"
+                        ></i>
+                        <i
+                          class="fa-solid fs-2 text-gray pb-5 ms-4 fa-cloud-moon-rain"
+                        ></i>
+                        <i
+                          class="fa-solid fs-2 text-gray pb-5 ms-4 fa-cloud-moon-rain"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="item2">
+                    <div
+                      class="title d-flex justify-content-center align-items-center"
+                    >
+                      <small>December</small>
+                    </div>
+                    <div class="info text-center p-5 text-white">
+                      <i
+                        class="fa-solid fs-1 fw-bold mb-4 fa-moon"
+                        style="color: #74c0fc; font-size: 24px"
+                      ></i>
+                      <p class="fs-4 fw-bold m-0">19.1oC</p>
+                      <p class="text-gray mb-4">19.1oC</p>
+                      <p class="color-secondary1">Clear</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="item3">
+                    <div
+                      class="title rounded-right-top d-flex justify-content-center align-items-center"
+                    >
+                      <small>December</small>
+                    </div>
+                    <div
+                      class="info text-center p-5 text-white rounded-right-buttom"
+                    >
+                      <i
+                        class="fa-solid fs-1 fw-bold mb-4 fa-moon"
+                        style="color: #74c0fc; font-size: 24px"
+                      ></i>
+                      <p class="fs-4 fw-bold m-0">19.1oC</p>
+                      <p class="text-gray mb-4">19.1oC</p>
+                      <p class="color-secondary1">Clear</p>
+                    </div>
+                  </div>
+                </div>  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-footer">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="fot-search">
+                <div
+                  class="search bg-main rounded-5 d-flex justify-content-between p-1"
+                >
+                  <input
+                    class="w-90 bg-main ms-3 text-white border-0 p-3"
+                    type="text"
+                    placeholder="Enter your email"
+                  />
+                  <button
+                    class="py-3 px-5 border-0 rounded-5 bg-secondary1 text-white"
+                  >
+                    Subscibe
+                  </button>
+                </div>
+                <p class="text-gray mt-3">
+                  Copyright 2014 Company name. Designed by Themezy. All rights
+                  reserved
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="ms-5 icon-foot">
+                <i
+                  class="fa-brands color-secondary1 rounded-circle bg-main p-3 fa-facebook"
+                ></i>
+                <i
+                  class="fa-brands color-secondary1 p-3 bg-main rounded-circle fa-twitter"
+                ></i>
+                <i
+                  class="fa-brands color-secondary1 p-3 bg-main rounded-circle fa-google-plus"
+                ></i>
+                <i
+                  class="fa-brands color-secondary1 p-3 bg-main rounded-circle fa-pinterest"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
